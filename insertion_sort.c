@@ -1,6 +1,7 @@
 #include<stdio.h>
 
 void insertion_sort(int arr[], int length);
+//void insertion_sort_desc(int arr[], int length);
 void show_array(int arr[], int length);
 
 int main() {
@@ -32,3 +33,18 @@ void show_array(int arr[], int length) {
     printf("%d", arr[length-1]);
     printf(" ]\n");
 }
+
+/*
+void insertion_sort_desc(int arr[], int length) {
+    for (int j = length-2; j >= 0; j--) {
+        int key = arr[j];
+        int i = j - 1; // i es el anterior a j
+        while (i > 0 && arr[i] < key) {
+            //printf("arr[i]<key\n");
+            arr[i+1] = arr[i];
+            i = i - 1;
+        }
+        arr[i+1] = key;
+    }
+}
+*/
